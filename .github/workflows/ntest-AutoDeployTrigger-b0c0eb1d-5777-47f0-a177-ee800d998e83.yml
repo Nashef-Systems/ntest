@@ -7,7 +7,7 @@ on:
     branches: 
       [ production ]
     paths:
-    - '**'
+    - 'nashef-test/**'
     - '.github/workflows/ntest-AutoDeployTrigger-b0c0eb1d-5777-47f0-a177-ee800d998e83.yml'
 
   # Allow mannually trigger 
@@ -36,8 +36,8 @@ jobs:
         with:
           push: true
           tags: nashef90/ntest:${{ github.sha }}
-          file: ./Dockerfile
-          context: ./
+          file: ./nashef-test/Dockerfile
+          context: ./nashef-test/
 
 
   deploy:
